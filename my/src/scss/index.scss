@@ -168,7 +168,10 @@
             }
         }
     }
-    .ul_con{
+    
+}
+//公共的ul列表样式
+.ul_con{
         height: auto;
         overflow: hidden;
         width: 1220px;
@@ -192,19 +195,17 @@
                         i{
                             font-size: 12px;
                         }
-                       
                     }
                     del{
                            font-size: 12px;
                         color: #999;
-                            
                     }
                 }
             }
             
         }
     }
-}
+
 //时尚女装
 .new_xinpin{
     width: 1200px;
@@ -228,7 +229,6 @@
             float: right;
             display: inline-block;
             margin: 0 0 0 220px;
-           
             a{
                 float: left;
                 padding: 0 10px;               
@@ -238,6 +238,7 @@
                 text-decoration: none;
                 color: #666;
             }
+            
         }
     }
     
