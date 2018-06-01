@@ -175,6 +175,7 @@
         height: auto;
         overflow: hidden;
         width: 1220px;
+        margin-top: 10px;
         li{
             float: left;
             width: 223px;
@@ -241,8 +242,357 @@
             
         }
     }
+    .new_xinpin_con{
+        width:1220px;
+        height: auto;
+        overflow: hidden;
+        .nxcl{
+            width: 190px;
+            height: 423px;
+            margin-right: 10px;
+            float: left;
+            background: #fafafa;
+            img{
+                width: 100%;
+            }
+            .nxcla{
+                width: 180px;
+                margin: 8px 0;
+                font-weight: bold;
+                height: auto;
+                padding-left: 10px;
+                a{
+                    color: #333;
+                    font-size: 12px;
+                    padding: 8px 14px 4px 0;
+                    display: inline-block;
+                }
+                a:hover{
+                    color: #333;
+                    text-decoration: none;
+                }
+            }
+        } 
+        .nxcr{
+            width: 1000px;
+            height: 423px;
+            float: left;
+            .nxcrimg{
+                width: 790px;
+                float: left;
+                margin-right: 10px;
+                background: url(../images/index/h.png) no-repeat center;
+                a img{
+                    float: left;
+                }
+                .ir1{
+                    width:580px;
+                    height: 423px;
+                    margin-right: 10px;
+                }
+                .ir2{
+                    width:200px;
+                    height: 253px;
+                    margin-bottom: 10px;
+                }
+                .ir3{
+                    width:200px;
+                    height: 160px;
+                }
+            }
+            .nxcrhot{
+                width: 178px;
+                height: 422px;
+                float: right;
+                border: 1px solid #ddd;
+                border-top: none;
+                padding: 0 10px;
+                h1{
+                    font-weight: bold;
+                    color: #c80a28;
+                    height: 15px;
+                    font-size: 14px;
+                    text-align: center;
+                    padding: 10px 0;
+                    background: none;
+                }
+                 ul{
+                        width: 100%;
+                        float: left;
+
+                        li.slif:first-child{
+                            border-top: 1px dashed #ddd;
+                        }
+                        li.slif{
+                            width: 100%;
+                            line-height: 16px;
+                            padding: 9px 0 10px 0;
+                            border-top: 1px solid #ddd;
+                            cursor: pointer;
+                            color: #333;
+                            float: left;
+                            max-height: 114px;
+                            h2{
+                                float: left;
+                                margin-top: 0;
+                                margin-bottom: 0;
+                                font-size: 12px;
+                                padding-left: 26px;
+                                background: url(../images/index/01.png) no-repeat;
+                                height: 16px;
+                            }
+                            .snum1{
+                                background: url(../images/index/02.png) no-repeat;
+                            }
+                            .snum2{
+                                background: url(../images/index/03.png) no-repeat;
+                            }
+                            .snum3{
+                                background: url(../images/index/04.png) no-repeat;
+                            }
+                            .snum4{
+                                background: url(../images/index/05.png) no-repeat;
+                            }
+                            .snum5{
+                                background: url(../images/index/06.png) no-repeat;
+                            }
+                            .snum6{
+                                background: url(../images/index/07.png) no-repeat;
+                            }
+                            .snum7{
+                                background: url(../images/index/08.png) no-repeat;
+                            }
+//                          ul{
+//                              width: 100%;
+//                              float: left;
+//                              li.hot_img{
+//                                  width: 80px;
+//                                  float: left;
+//                                  border: none;
+//                                  position: relative;
+//                                  img{
+//                                      width: 80px;
+//                                      height: 114px;
+//                                      
+//                                  }
+//                              }
+//                              li.hot_info{
+//                                  width: 90px;
+//                                  float: right;
+//                                  margin-top: 3px;
+//                                  p{
+//                                      color: #333;
+//                                      line-height: 20px;
+//                                      
+//                                  }
+//                              }
+//                          }
+                            li.hot_img{
+                                float: left;
+                                img{
+                                    width: 80px;
+                                }
+                            }
+                            li.hot_info{
+                                float: right;
+                                p{
+                                    
+                                    i{
+                                        color: #c80a28;
+                                        font-size: 16px;
+                                    }
+                                    del{
+                                        color: #999;
+                                    }
+                                    span{
+                                        color: #c80a28;
+                                    }
+                                }
+                            }
+                        }
+                        
+                    }
+            }
+        }  
+    }
     
 }
+//妈妈装
+.new_xinpin{
+    h1.xinmom{
+       background: url(../images/index/web_index.png) no-repeat 0 -140px;
+    }
+    .new_xinpin_con{
+        #nxcrmom{
+            width: 1000px;
+            height: 423px;
+            float: left;
+            a img{
+                float: left;
+                display: inline-block;
+            }
+            .momb{
+                width:790px;
+                height: 423px;
+                float: left;
+                margin-right: 10px;
+                 .ir1{
+                    width:790px;
+                    height: 423px;
+                    margin-right: 10px;
+                }
+            }
+            .mombr{
+                width: 200px;
+                float: right;
+                height: auto;
+                .ir2{
+                    width:200px;
+                    height: 293px;
+                    margin-bottom: 10px;
+                }
+                .ir3{
+                    width:200px;
+                    height: 130px;
+                }
+            }
+        }
+    }
+}
+
+
+//甜美少女风
+
+.new_xinpin{
+    h1.shaonv{
+       background: url(../images/index/web_index.png) no-repeat 0 -172px;
+    }
+    .new_xinpin_con{
+        #nxcrshaonv{
+            width: 1000px;
+            height: 423px;
+            float: left;
+            a img{
+                float: left;
+                display: inline-block;
+            }
+            .shaonvb{
+                width:790px;
+                height: 423px;
+                float: left;
+                margin-right: 10px;
+                 .ir1{
+                    width:790px;
+                    height: 423px;
+                    margin-right: 10px;
+                }
+            }
+            .shaonvbr{
+                width: 200px;
+                float: right;
+                height: auto;
+                .ir2{
+                    width:200px;
+                    height: 135px;
+                    margin-bottom: 9px;
+                }
+            }
+        }
+    }
+}
+
+//童装
+.new_xinpin{
+    h1.xinchildren{
+       background: url(../images/index/web_index.png) no-repeat 0 -203px;
+    }
+    .new_xinpin_con{
+        #nxcrmom{
+            width: 1000px;
+            height: 423px;
+            float: left;
+            a img{
+                float: left;
+                display: inline-block;
+            }
+            .momb{
+                width:790px;
+                height: 423px;
+                float: left;
+                margin-right: 10px;
+                 .ir1{
+                    width:790px;
+                    height: 423px;
+                    margin-right: 10px;
+                }
+            }
+            .mombr{
+                width: 200px;
+                float: right;
+                height: auto;
+                .ir2{
+                    width:200px;
+                    height: 206px;
+                    margin: 0 0 10px 0;
+                }
+               
+            }
+        }
+    }
+}
+
+//尼班诗女装
+.new_xinpin{
+    h1.xinnibans{
+       background: url(../images/index/web_index.png) no-repeat 0 -265px;
+    }
+    .new_xinpin_con{
+        #nxcrmom{
+            width: 1000px;
+            height: 423px;
+            float: left;
+            a img{
+                float: left;
+                display: inline-block;
+            }
+            .momb{
+                width:790px;
+                height: 423px;
+                float: left;
+                margin-right: 10px;
+                 .ir1{
+                    width:790px;
+                    height: 423px;
+                    margin-right: 10px;
+                }
+            }
+            .mombr{
+                width: 200px;
+                float: right;
+                height: auto;
+                .ir2{
+                    width:200px;
+                    height: 423px;
+                    margin: 0 0 10px 0;
+                }
+               
+            }
+        }
+    }
+}
+
+//底部一张图
+#bottomi{
+    width: 1200px;
+    margin: 30px auto;
+    height: 90px;
+    img{
+        width: 100%;
+    }
+}
+
+
+
 
 
 
