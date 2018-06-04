@@ -63,7 +63,7 @@
 /*商品列表导航*/
 #sHeader .sPli{
     position: absolute;
-    z-index: 6;
+    z-index: 5;
     top: -20px;
     h2{
         height: 33px;
@@ -80,7 +80,7 @@
         height: 453px;
         background-color: #e3e3e3;
         position: relative;
-        z-index: 6;
+        z-index: 5;
         overflow: hidden;
         top: -10px;
         li{
@@ -205,39 +205,83 @@
 
 //banner图轮播
 
-#sbanner{
+//#sbanner{
+//  width: 100%;
+//  overflow: hidden;
+//  min-width: 1200px;
+//  .sbanner_index{
+//      position: relative;
+//      width:100% ;
+//      height: 450px;
+//      overflow: hidden;
+//      ul{
+//          width:100%;
+//          position: absolute;
+//          bottom: 6px;
+//          z-index: 10;
+//          text-align: center;
+//          li{
+//              display: inline-block;
+//              width: 120px;
+//              line-height: 30px;
+//              text-align: center;
+//              background: #333;
+//              color: #fff;
+//              font-size:12px;
+//              cursor: pointer;
+//              margin-right: 4px;
+//              z-index: 12;
+//          }
+//      }
+//      .sba_i_con{
+//          position: absolute;
+//          left: 0;
+//          top: 0;
+//          z-index: 1;
+//          width: 100%;
+//          height: 450px;
+//          cursor: pointer;
+//       
+//      }
+//  }
+// 
+//}
+
+
+#myCarousel{
     width: 100%;
     overflow: hidden;
     min-width: 1200px;
+    ol{
+        width:100%;
+        position: absolute;
+        bottom: 6px;
+        z-index: 10;
+        text-align: center;
+        li{
+//          display: inline-block;
+//          width: 120px;
+//          line-height: 30px;
+//          text-align: center;
+//          background: #333;
+//          color: #fff;
+//          font-size:12px;
+//          cursor: pointer;
+//          margin-right: 4px;
+//          z-index: 12;
+        }
+    }
     .sbanner_index{
         position: relative;
         width:100% ;
         height: 450px;
         overflow: hidden;
-        ul{
-            width:100%;
-            position: absolute;
-            bottom: 6px;
-            z-index: 10;
-            text-align: center;
-            li{
-                display: inline-block;
-                width: 120px;
-                line-height: 30px;
-                text-align: center;
-                background: #333;
-                color: #fff;
-                font-size:12px;
-                cursor: pointer;
-                margin-right: 4px;
-                z-index: 12;
-            }
-        }
+        
         .sba_i_con{
             position: absolute;
             left: 0;
             top: 0;
-            z-index: 2;
+            z-index: 1;
             width: 100%;
             height: 450px;
             cursor: pointer;
@@ -246,7 +290,6 @@
     }
    
 }
-
 
 /*主体部分*/
 #container_s{width:1200px;margin: 0 auto;overflow: hidden;height: auto;min-height: 430px;padding: 5px 0;}

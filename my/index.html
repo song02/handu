@@ -345,7 +345,7 @@
 		
 		<!--banner-->
 		
-		<div id="sbanner">
+		<!--<div id="sbanner">
 			<div class="sbanner_index">
 				<div class="sba_i_con">
 					<a href="#">
@@ -369,6 +369,35 @@
 					<li>奇妙灵兽节</li>
 					<li>娜扎夏装</li>
 				</ul>
+			</div>
+		</div>-->
+		
+		<div id="myCarousel" class="carousel slide">
+			<ol class="carousel-indicators">
+				<li data-target="#myCarousel" data-slide-to="0"></li>
+				<li data-target="#myCarousel" data-slide-to="1" class="active"></li>
+			</ol>
+			<div class="sbanner_index carousel-inner">
+				
+				<div class="sba_i_con item">
+					<a href="#">
+						<div style="background: url(images/index/lb_01.png) no-repeat center 0px;width: 100%;height: 90px;"></div>
+						<div style="background: url(images/index/lb_02.png) no-repeat center 0px;width: 100%;height: 90px;"></div>
+						<div style="background: url(images/index/lb_03.png) no-repeat center 0px;width: 100%;height: 90px;"></div>
+						<div style="background: url(images/index/lb_04.png) no-repeat center 0px;width: 100%;height: 90px;"></div>
+						<div style="background: url(images/index/lb_05.png) no-repeat center 0px;width: 100%;height: 90px;"></div>
+					</a>
+				</div>
+				<div class="sba_i_con item active">
+					<a href="#">
+						<div style="background: url(images/index/naz_01.png) no-repeat center 0px;width: 100%;height: 90px;"></div>
+						<div style="background: url(images/index/naz_02.png) no-repeat center 0px;width: 100%;height: 90px;"></div>
+						<div style="background: url(images/index/naz_03.png) no-repeat center 0px;width: 100%;height: 90px;"></div>
+						<div style="background: url(images/index/naz_04.png) no-repeat center 0px;width: 100%;height: 90px;"></div>
+						<div style="background: url(images/index/naz_05.png) no-repeat center 0px;width: 100%;height: 90px;"></div>
+					</a>
+				</div>
+				
 			</div>
 		</div>
 		
@@ -1328,12 +1357,51 @@
 				})
 				
 //			banner图轮播
-//			获取按钮图标
-			var $blis = $('#sbanner .sbanner_index ul li');
-//			获取大图
-			var $bimgs = $('#sbanner .sbanner_index .sba_i_con');
-//			
+			$('#myCarousel').carousel({
 			
+			//自动4秒播放
+			
+			interval : 3000,
+			
+			});
+//			获取按钮图标
+//			var $blis = $('#sbanner .sbanner_index ul li');
+////			获取大图
+//			var $bimgs = $('#sbanner .sbanner_index .sba_i_con');
+////			
+//			$bimgs.eq(0).css('z-index',2);
+//			$blis.eq(1).css({background:'#fff',color:'#333'});
+//			
+//			$blis.each(function(){
+//				$(this).hover(function(){
+//					
+//					$bimgs.eq(1).animate({
+//						zIndex:2,
+//						display:"block",
+//						opacity:1
+//					},500)
+//					$bimgs.eq(0).animate({
+//						zIndex:1,
+//						display:"none",
+//						opacity:0
+//					},500)
+//					$(this).css({background:'#fff',color:'#333'});
+//				},function(){
+//					
+//					$bimgs.eq(0).animate({
+//						zIndex:2,
+//						display:"block",
+//						opacity:1
+//					},500)
+//					$bimgs.eq(1).animate({
+//						zIndex:1,
+//						display:"none",
+//						opacity:0
+//					},500)
+//					$(this).css({background:'#333',color:'#fff'});
+//				});
+//				})
+//			
 			})
 		</script>
 	</body>
