@@ -327,7 +327,7 @@
 						</div>
 						
 					</div>
-					<div class="smenuConin"style="width: 400px;top: 300px;">
+					<div class="smenuConin"style="width: 400px;top: 250px;">
 							<div class="menu_items">
 							<div class="menu_items_list">
 								<h3>特惠精选</h3>
@@ -356,7 +356,7 @@
 						<div style="background: url(images/index/lb_05.png) no-repeat center 0px;width: 100%;height: 90px;"></div>
 					</a>
 				</div>
-				<div class="sba_i_con" style="display: none;">
+				<div class="sba_i_con">
 					<a href="#">
 						<div style="background: url(images/index/naz_01.png) no-repeat center 0px;width: 100%;height: 90px;"></div>
 						<div style="background: url(images/index/naz_02.png) no-repeat center 0px;width: 100%;height: 90px;"></div>
@@ -1189,6 +1189,68 @@
 			
 		</div>
 		
+		<!--尾部-->
+		<div id="hfooter">
+			<div class="footer_info">
+				<dl>
+					<dt></dt>
+					<dd><a href="#">用户注册</a></dd>
+					<dd><a href="#">购物流程</a></dd>
+					<dd><a href="#">网站导航</a></dd>
+					<dd><a href="#">帮助中心</a></dd>
+				</dl>
+				<dl>
+					<dt style="background-position: -11px -34px;"></dt>
+					<dd><a href="#">在线支付</a></dd>
+					<dd><a href="#">扫码支付</a></dd>
+					<dd><a href="#">优惠券支付</a></dd>
+				</dl>
+				<dl>
+					<dt style="background-position: 0  -67px;"></dt>
+					<dd><a href="#">配送说明</a></dd>
+					<dd><a href="#">运费说明</a></dd>
+					<dd><a href="#">验货签收</a></dd>
+				</dl>
+				<dl>
+					<dt style="background-position: -6px -100px;"></dt>
+					<dd><a href="#">退换货政策</a></dd>
+					<dd><a href="#">退换货流程</a></dd>
+				</dl>
+				<dl>
+					<dt style="background-position: -7px -133px;"></dt>
+					<dd><a href="#">会员制度</a></dd>
+					<dd><a href="#">会员积分</a></dd>
+				</dl>
+				<dl>
+					<dt style="background-position: -9px -202px;"></dt>
+					<dd><a href="#">品牌故事</a></dd>
+					<dd><a href="#">媒体报道</a></dd>
+					<dd><a href="#">诚聘英才</a></dd>
+					<dd><a href="#">联系我们</a></dd>
+				</dl>
+			</div>
+			<div class="footer_black">
+				<a href="#">首页</a>&nbsp;&nbsp;|&nbsp;&nbsp;
+				<a href="#">品牌故事</a>&nbsp;&nbsp;|&nbsp;&nbsp;
+				<a href="#">诚聘英才</a>&nbsp;&nbsp;|&nbsp;&nbsp;
+				<a href="#">媒体报道</a>&nbsp;&nbsp;|&nbsp;&nbsp;
+				<a href="#">联系我们</a>&nbsp;&nbsp;|&nbsp;&nbsp;
+				<a href="#">网站地图</a>&nbsp;&nbsp;|&nbsp;&nbsp;
+				<a href="#">友情链接</a>
+			</div>
+			<center class="footer_copyright">
+				<span>
+					<img src="images/index/copyright.gif"/>
+					鲁ICP备14003322号-2 © 2015-2017 handu.com All Rights Reserved. <a href="#"><img src="images/index/beiantubiao.png"/>鲁公网安备 37010202000113号</a> 韩都衣舍电子商务集团股份有限公司，禁止非法复制<img src="images/index/pic.gif" alt="" />
+				</span>
+				<center>
+					<a href="#"><img src="images/index/zxmbutton02_sy.jpg"/></a>
+					<a href="#"><img src="images/index/zxmbutton05_sy.jpg"/></a>
+					<a href="#"><img src="images/index/cctv.png"/></a>
+				</center>
+			</center>
+		</div>
+		
 		<script type="text/javascript" src="js/jquery-1.11.3.js" ></script>
 		<script type="text/javascript" src="js/bootstrap.js" ></script>
 		<script type="text/javascript">
@@ -1270,64 +1332,7 @@
 			var $blis = $('#sbanner .sbanner_index ul li');
 //			获取大图
 			var $bimgs = $('#sbanner .sbanner_index .sba_i_con');
-			var wid = $bimgs.eq(0).width();
-			var timer = null;
-			var inde = 0;
-			$blis.eq(1).css({background:'#fff',color:'#333'});
-			//鼠标滑过li时，对应的大图改变
-			$blis.eq(0).hover(function(){
-				$bimgs.eq(0).animate({width : 0,height : 0,opacity : 0},1000);
-				$bimgs.eq(1).css('display','block').animate({width : wid,height : 450,opacity : 1},1000);
-				$(this).css({background:'#fff',color:'#333'});
-				$blis.eq(1).css({background:'#333',color:'#fff'})
-			},function(){
-				if($bimgs.eq(0).attr('display') == 'block'){
-					$(this).css({background:'#333',color:'#fff'});
-				}
-				
-			})
-			$blis.eq(1).hover(function(){
-				$bimgs.eq(1).css('display','block').animate({width : 0,height : 0,opacity : 0},1000);
-				$bimgs.eq(0).animate({width : wid,height : 450,opacity : 1},1000);
-				$(this).css({background:'#fff',color:'#333'});
-				$blis.eq(0).css({background:'#333',color:'#fff'});
-			},function(){
-				if($bimgs.eq(1).attr('display') == 'block'){
-					$(this).css({background:'#333',color:'#fff'});
-				}
-				
-			})
-			
-//			自动轮播
-			timer = setInterval(function(){
-				$bimgs.eq((++inde) % 2).toggle();
-				$bimgs.eq(inde % 2).toggle();
-//				inde ++;
-//				$bimgs.each(function(){
-//					$(this).toggle();
-//					if($bimgs.eq(0).attr('display') == 'block'){
-//						$blis.eq(1).css({background:'#fff',color:'#333'});
-//						$blis.eq(0).css({background:'#333',color:'#fff'});
-//						
-//					}else if($bimgs.eq(1).attr('display') == 'block'){
-//						$blis.eq(0).css({background:'#fff',color:'#333'});
-//						$blis.eq(1).css({background:'#333',color:'#fff'});
-//					}
-//				})
-			},3000);
-			
-//			$blis.each(function(){
-//				$(this).hover(function(){
-//					$bimgs.eq($blis.index($(this))).toggle();
-//					$bimgs.eq(($blis.index($(this)) + 1) % 2).toggle();
-////					alert($blis.index($(this)));
-//					$(this).css({background:'#333',color:'#fff'});
-//				},function(){
-//					$bimgs.eq($blis.index($(this))).toggle();
-//					$bimgs.eq(($blis.index($(this)) + 1) % 2).toggle();
-//					$(this).css({background:'#fff',color:'#333'});
-//				})
-//			})
+//			
 			
 			})
 		</script>

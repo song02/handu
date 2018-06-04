@@ -6,7 +6,7 @@ const uglify = require('gulp-uglify');
 const concat = require('gulp-concat');
 
 gulp.task('sass',function(){
-	gulp.src('src/scss/*.scss').pipe(sass()).pipe(rename({"suffix":".min"})).pipe(cssnano()).pipe(gulp.dest('css'));
+	gulp.src('src/scss/*.scss').pipe(sass().on("error",sass.logError)).pipe(rename({"suffix":".min"})).pipe(cssnano()).pipe(gulp.dest('css'));
 });
 
 gulp.task('js',function(){

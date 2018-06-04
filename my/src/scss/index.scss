@@ -63,7 +63,7 @@
 /*商品列表导航*/
 #sHeader .sPli{
     position: absolute;
-    z-index: 2;
+    z-index: 6;
     top: -20px;
     h2{
         height: 33px;
@@ -80,7 +80,7 @@
         height: 453px;
         background-color: #e3e3e3;
         position: relative;
-        z-index: 2;
+        z-index: 6;
         overflow: hidden;
         top: -10px;
         li{
@@ -208,30 +208,43 @@
 #sbanner{
     width: 100%;
     overflow: hidden;
-    position: relative;
-    .sbanner_index ul{
-        width:100%;
-        position: absolute;
-        bottom: 6px;
-        z-index: 10;
-        text-align: center;
-        li{
-            display: inline-block;
-            width: 120px;
-            line-height: 30px;
+    min-width: 1200px;
+    .sbanner_index{
+        position: relative;
+        width:100% ;
+        height: 450px;
+        overflow: hidden;
+        ul{
+            width:100%;
+            position: absolute;
+            bottom: 6px;
+            z-index: 10;
             text-align: center;
-            background: #333;
-            color: #fff;
-            font-size:12px;
-            cursor: pointer;
-            margin-right: 4px;
-            z-index: 12;
+            li{
+                display: inline-block;
+                width: 120px;
+                line-height: 30px;
+                text-align: center;
+                background: #333;
+                color: #fff;
+                font-size:12px;
+                cursor: pointer;
+                margin-right: 4px;
+                z-index: 12;
+            }
         }
-        
+        .sba_i_con{
+            position: absolute;
+            left: 0;
+            top: 0;
+            z-index: 2;
+            width: 100%;
+            height: 450px;
+            cursor: pointer;
+         
+        }
     }
-    .sbanner_index .sba_i_con{
-//      position: absolute;
-    }
+   
 }
 
 
@@ -753,6 +766,370 @@
         width: 100%;
     }
 }
+
+//尾部
+#hfooter{
+    width: 1200px;
+    height: auto;
+    overflow: hidden;
+    margin: 0 auto;
+    min-height: 140px;
+    .footer_info{
+        width: 100%;
+        margin-top: 15px;
+        background: #fafafa;
+        overflow: hidden;
+        dl{
+            float: left;
+            padding-left:82px;
+            margin: 20px 0;
+            
+            dt{
+                height: 25px;
+                width: 100px;
+                background: url(../images/index/footer01.png) no-repeat;
+            }
+            dd{
+                height: 20px;
+                line-height: 20px;
+                color: #333;
+                margin-left: 10px;
+                a{
+                    color: #565656;
+                    
+                }
+            }
+            
+        }
+    }
+    .footer_black{
+        width: 100%;
+        height: 30px;
+        background: #393939;
+        text-align: center;
+        font-size: 12px;
+        color:#fff;
+        margin: 5px 0;
+        line-height: 30px;
+        a{
+             color:#fff;
+             text-decoration: none;
+        }
+    }
+    .footer_copyright{
+        margin: 15px 0;
+        img{
+            display: inline-block;
+            }
+        span{
+            width: 100%;
+            a{
+                display: inline-block;
+            }
+            a:hover{
+                text-decoration: none;
+            }
+        }
+        
+    }   
+}
+
+//登录
+
+#hlogin{
+    width: 1100px;
+    margin: 10px auto;
+    height: auto;
+    overflow: hidden;
+    .hloginImg_left{
+        float: left;
+        width: 420px;
+        margin: 40px 40px 0 0;
+        img{
+            width: 410px;
+            height: 290px;
+        }
+    }
+    .hlogin_right{
+        width: 527px;
+        float: left;
+        border-left: 1px dashed #ddd;
+        padding-left: 80px;
+        .login_form{
+            width: 352px;
+            float: left;
+            margin-top: 25px;
+            box-shadow: 2px 1px 5px rgba(0,0,0,0.4);
+            padding: 20px 40px;
+            border: 1px solid #ddd;
+            opacity: 0.95;
+            h1{
+                width: 100%;
+                height: 30px;
+                font-size: 20px;
+                border-bottom: 1px solid #eee;
+                color:#666;
+            }
+            form{
+                padding-top: 30px;
+                p{
+                    margin-top: 10px;
+                    color: #393939;
+                    font-size: 14px;
+                    line-height: 33px;
+                    input{
+                        width: 207px;
+                        font-size: 12px;
+                        color: #bbb;
+                        outline: none;
+                    }
+                    a{
+                        text-decoration: underline;
+                        font-size: 12px;
+                        color: #393939;
+                    }
+                }
+                p.psub{
+                    font-size: 12px;
+                    input:first-child{
+                        background: #BE0929;
+                        width: 140px;
+                        height: 35px;
+                        line-height: 35px;
+                        text-align: center;
+                        color: #fff;
+                        border-radius: 2px;
+                        letter-spacing: 1px;
+                        border: none;
+                    }
+                    input:last-child{
+                        width: 20px;
+                    }
+                }
+            }
+        }
+        .login_other{
+            width:528px ;
+            padding-top: 30px;
+            padding-bottom: 15px;
+            clear: both;
+            height: auto;
+            overflow: hidden;
+            .login_other_title{
+                float: left;
+                font-size: 12px;
+                height: 30px;
+                line-height: 30px;
+                clear: both;
+            }
+            .login_other_btn{
+                float: left;
+                a span{
+                   float: left;
+                   height: 30px; 
+                   width: 97px;
+                   margin-right: 10px;
+                   background: url(../images/sub/NEWS_login.png) no-repeat 0 -528px;
+                }
+            }
+        }
+    }
+}
+
+
+//注册
+#hregist{
+    width: 1100px;
+    margin: 10px auto;
+    height: auto;
+    overflow: hidden;
+    .hregist_left{
+        float: left;
+        width: 360px;
+        margin: 40px 0 0 30px;
+        .hregist_left_list{
+            font-size: 14px;
+            width: 360px;
+            line-height: 40px;
+            input{
+                background: url(../images/sub/NEWS_login.png) no-repeat -347px -211px;
+                width: 103px;
+                height: 30px;
+                border: none;
+                color: #fff;
+                font-size: 16px;
+                line-height: 30px;
+                letter-spacing: 1px;
+                margin: 8px 0 0 10px;
+                cursor: pointer;
+                text-align: center;
+            }
+        }
+        .hregist_left_dingyue{
+            width: 430px;
+            height: 97px;
+            margin-top: 8px;
+            input{
+                width: 250px;
+                height: 25px;
+                border: 1px solid #ddd;
+                float: left;
+                font: 14px/20px '宋体';
+                color: #666;
+            }
+            button{
+                display: block;
+                width: 70px;
+                height: 22px;
+                background: url(../images/sub/footer00.png) no-repeat;
+                float: left;
+                margin: 2px 8px;
+                border: none;
+                cursor: pointer;
+            }
+        }
+    }
+    .hregist_right{
+        height: 550px;
+        float: left;
+        border-left: #DDD 1px dashed;
+        margin: 30px 0 0 50px;
+        padding-left: 50px;
+        .hregist_matel{
+            width: 609px;
+            border-bottom: #ddd 1px dashed;
+            height: 120px;
+            line-height: 50px;
+            .regist_nu{
+                background: url(../images/sub/NEWS_login.png) no-repeat 0 -326px;
+                width: 22px;
+                height: 22px;
+                font-size: 14px;
+                color: #fff;
+                float: left;
+                text-align: center;
+                line-height: 22px;
+                margin: 13px 0 0 0;
+            }
+            .regist_na{
+                margin-left: 8px;
+                line-height: 50px;
+                float: left;
+            }
+            .regist_te{
+                width: 316px;
+                margin: 8px 0 0 0;
+                float: left;
+                a{
+                    background: url(../images/sub/NEWS_login.png) no-repeat 0 -102px;
+                    width: 135px;
+                    height: 38px;
+                    border: none;
+                    display: block;
+                    line-height: 32px;
+                    float: left;
+                    text-align: center;
+                    font-size: 14px;
+                    margin-left: 10px;
+                }
+                a.emaB{
+                    color: #fff;
+                }
+                a.telB{
+                    background-position: 0 -151px;
+                    color: #393939;
+                }
+                a:hover{
+                    text-decoration: none;
+                }
+            }
+        }
+        .hregist_info{
+            margin-top: 20px;
+            .regist_nu{
+                background: url(../images/sub/NEWS_login.png) no-repeat 0 -326px;
+                width: 22px;
+                height: 22px;
+                font-size: 14px;
+                color: #fff;
+                float: left;
+                text-align: center;
+                line-height: 22px;
+                margin: 13px 0 0 0;
+            }
+            .regist_na{
+                margin-left: 8px;
+                line-height: 50px;
+                float: left;
+            }
+            .regist_right_list{
+                width: 580px;
+                li{
+                    width: 580px;
+                    line-height: 33px;
+                    float: left;
+                    padding-left: 80px;
+                    .regist_rN{
+                        float: left;
+                    }
+                    .regist_list_txt{
+                        background: url(../images/sub/shopping_login.png) no-repeat -0 -182px;
+                        width: 210px;
+                        height: 33px;
+                        border: none;
+                        float: left;
+                        text-indent: 5px;
+                        line-height: 33px;
+                    }
+                    .regist_telphonetime{
+                        background: url(../images/sub/NEWS_login.png) no-repeat -256px -107px;
+                        width: 116px;
+                        height: 26px;
+                        line-height: 26px;
+                        text-align: center;
+                        margin: 3px 0 0 5px;
+                        color: #7b7b7b;
+                        border: none;
+                    }
+                    .regist_list_con{
+                        float: left;
+                        color: #7b7b7b;
+                        text-indent: 44px;
+                        width: 600px;
+                        a{
+                            color: #bf0000;
+                        }
+                    }
+                    .regist_xieyi{
+                        float: left;
+                        color: #393939;
+                        text-indent: 48px;
+                        font-size: 16px;
+                        margin-top: 10px;
+                        a{
+                             color: #bf0000;
+                        }
+                    }
+                    .regist_list_regree{
+                        background: url(../images/sub/NEWS_login.png) no-repeat 0 -51px;
+                        width: 171px;
+                        height: 43px;
+                        border: none;
+                        font-size: 18px;
+                        color: #fff;
+                        margin: 10px 0 0 44px;
+                        cursor: pointer;
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+
+
+
 
 
 

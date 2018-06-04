@@ -1,0 +1,530 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+    	<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>韩都衣舍</title>
+		<link rel="stylesheet" href="css/bootstrap.css" />
+		<link rel="stylesheet" type="text/css" href="css/index.min.css"/>
+		
+	</head>
+	<body>
+		
+		<!--顶部导航-->
+		
+		<div id="c_nav">
+			<div class="contain_nav">
+				<div class="nav_left">
+					<ul>
+						<li><a href="index.html">返回首页</a></li>
+						<li><a href="index.html">收藏网站</a></li>
+					</ul>
+				</div>
+				<div class="nav_right">
+					<ul class="nav_ulr_left">
+						<li>您好，欢迎光临韩都衣舍！</li>
+						<li><a href="#">登录</a></li>
+						<li><a href="#">注册</a></li>
+						<li><a href="#">购物车</a></li>
+						
+					</ul>
+					<ul class="nav_ulr_right">
+						<li><a href="#">在线客服</a></li>
+						<li><a href="#">帮助中心</a></li>
+						<li id="wangzhangdh"><span class="glyphicon glyphicon-menu-hamburger"></span><a href="#">网站导航</a></li>
+					</ul>
+				</div>
+				<div class="webdhbox" id="wangzhangBox">
+					<div class="webdh">
+						<div class="hot">
+							<h1>大家都在买<span>Hot</span></h1>
+							<ul>
+								<li><a href="#">t恤</a></li>
+								<li><a href="#">连衣裙</a></li>
+								<li><a href="#">牛仔裤</a></li>
+								<li><a href="#">毛衣针织</a></li>
+								<li><a href="#">卫衣绒衫</a></li>
+								<li><a href="#">休闲套装</a></li>
+								
+							</ul>
+						</div>
+						<div class="Hstyle">
+							<h1>女装<span>Women</span></h1>
+							<ul>
+								<li><a href="#">韩风快时尚女装</a></li>
+								<li><a href="#">韩风快时尚妈妈装</a></li>
+								<li><a href="#">韩风甜美少女装</a></li>
+								<li><a href="#">东方复古设计师女装</a></li>
+								<li><a href="#">韩风名媛时尚女装</a></li>
+								<li><a href="#">欧美浪漫田园风女装</a></li>
+								<li><a href="#">韩风大码女装</a></li>
+								<li><a href="#">欧美快时尚女装</a></li>
+							</ul>
+						</div>
+						<div class="AMH">
+							<h1>男装<span>Men</span></h1>
+							<ul>
+								<li><a href="#">韩风快时尚男装</a></li>
+								<li><a href="#">东方禅意设计师男装</a></li>
+								<li><a href="#">欧美街头轻潮男装</a></li>
+							</ul>
+						</div>
+						<div class="mini">
+							<h1>童装<span>Children</span></h1>
+							<ul>
+								<li><a href="#">韩风快时尚童装</a></li>
+								<li><a href="#">东方简约设计师童装</a></li>
+							</ul>
+						</div>
+						<div class="help">
+							<h1>帮助中心<span>Help</span></h1>
+							<ul>
+								<li><a href="#">会员制度</a></li>
+								<li><a href="#">售后服务</a></li>
+								<li><a href="#">购物流程</a></li>
+								<li><a href="#">关于发票</a></li>
+								<li><a href="#">配送方式</a></li>
+								<li><a href="#">韩都招聘</a></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+			
+		</div>
+		
+		<!--头部的logo及导航-->
+		
+		<div id="top_header">
+			<div class="top_header_logo">
+				<a href="http://www.handu.com"></a>
+			</div>
+			<div class="top_header_search">
+				<div class="top_header_search_c">
+					<form action="" method="post">
+						<input type="text" name="" class="text" value="时髦连衣裙 换季搭配制胜法宝" onfocus="if (value =='时髦连衣裙 换季搭配制胜法宝'){value =''}" onblur="if (value ==''){value='时髦连衣裙 换季搭配制胜法宝'}"/>
+						
+						<input type="submit" class="button" value="搜索"/>
+					</form>
+					<div class="hotwords">
+						<a href="#">韩风女装</a><b>|</b>
+						<a href="#">可爱童装</a><b>|</b>
+						<a href="#">韩风男装</a><b>|</b>
+						<a href="#">甜美女装</a><b>|</b>
+						<a href="#">时尚妈妈</a><b>|</b>
+						<a href="#">文艺女装</a><b>|</b>
+					</div>
+				</div>
+			</div>
+			<div class="erweima">
+				<img src="images/index/ewm.png" alt="" />
+				<p>扫码领50元优惠劵</p>
+			</div>
+		</div>
+		<!--商品列表鼠标滑过-->
+		
+		<div id="sHeader">
+			<ul class="sMenuHeader">
+				<li><a href="#">防骗公告</a></li>
+				<li><a href="#">团购批发</a></li>
+				<li class="sright"><a href="#">招兵买马</a></li>
+				<li class="sright"><a href="#">韩都资讯</a></li>
+			</ul>
+			<!--商品分类-->
+			<div class="sPli">
+				<h2>全部商品分类</h2>
+				<ul class="sPli_list" style="display: none;">
+					<li>
+						<h3>
+							<i>
+								<img src="images/index/tb1.png" style="display: block;"/>
+								<img src="images/index/tb01.png" style="display: none;"/>
+							</i>
+							全部商品分类
+						</h3>
+						<a href="#">本周新品</a>
+						<a href="#">按价格</a>
+						<a href="#">按销量</a>
+						<span></span>
+					</li>
+					<li>
+						<h3>
+							<i>
+								<img src="images/index/tb2.png" style="display: block;"/>
+								<img src="images/index/tb02.png" style="display: none;"/>
+							</i>
+							精选推荐
+						</h3>
+						<a href="#">本周新品</a>
+						<a href="#">按价格</a>
+						<a href="#">按销量</a>
+						<span></span>
+					</li>
+					<li>
+						<h3>
+							<i>
+								<img src="images/index/tb3.png" style="display: block;"/>
+								<img src="images/index/tb03.png" style="display: none;"/>
+							</i>
+							潮流女装
+						</h3>
+						<a href="#">本周新品</a>
+						<a href="#">按价格</a>
+						<a href="#">按销量</a>
+						<span></span>
+					</li>
+					<li>
+						<h3>
+							<i>
+								<img src="images/index/tb5.png" style="display: block;"/>
+								<img src="images/index/tb05.png" style="display: none;"/>
+							</i>
+							可爱童装
+						</h3>
+						<a href="#">本周新品</a>
+						<a href="#">按价格</a>
+						<a href="#">按销量</a>
+						<span></span>
+					</li>
+					<li>
+						<h3>
+							<i>
+								<img src="images/index/tb6.png" style="display: block;"/>
+								<img src="images/index/tb06.png" style="display: none;"/>
+							</i>
+							时尚妈妈
+						</h3>
+						<a href="#">本周新品</a>
+						<a href="#">按价格</a>
+						<a href="#">按销量</a>
+						<span></span>
+					</li>
+					<li>
+						<h3>
+							<i>
+								<img src="images/index/w.png" style="display: block;"/>
+								<img src="images/index/w.png" style="display: none;"/>
+							</i>
+							韩风男装
+						</h3>
+						<a href="#">本周新品</a>
+						<a href="#">按价格</a>
+						<a href="#">按销量</a>
+						<span></span>
+					</li>
+					<li>
+						<h3>
+							<i>
+								<img src="images/index/tb8.png" style="display: block;"/>
+								<img src="images/index/tb8.png" style="display: none;"/>
+							</i>
+							明星同款
+						</h3>
+						<a href="#">本周新品</a>
+						<a href="#">按价格</a>
+						<a href="#">按销量</a>
+						<span></span>
+					</li>
+				</ul>
+				<!--鼠标滑上显示菜单-->
+				<div class="sPli_menu">
+					<div class="smenuConin">
+						<div class="smenul">
+							<a href="#"><img src="images/index/nana.png"/></a>
+							<a href="#"><img src="images/index/hstyle.png"/></a>
+							<a href="#"><img src="images/index/forqueen.png"/></a>
+							<a href="#"><img src="images/index/hanyunyixiang.png"/></a>
+							<a href="#"><img src="images/index/nibbuns.png"/></a>
+							<a href="#"><img src="images/index/sulv.png"/></a>
+							<a href="#"><img src="images/index/Hn.png"/></a>
+							<a href="#"><img src="images/index/anma.png"/></a>
+							<a href="#"><img src="images/index/ht.png"/></a>
+						</div>
+						<div class="smenur">
+							<a href="#"><img src="images/index/mini.png"/></a>
+							<a href="#"><img src="images/index/hp.png"/></a>
+						</div>
+					</div>
+					<div class="smenuConin" style="width: 400px;">
+						<div class="menu_items">
+							<div class="menu_items_list">
+								<h3>特惠精选</h3>
+								<p><a href="#">清仓特惠</a><a href="#">爆款特惠</a></p>
+							</div>
+							<div class="line1"></div>
+							<div class="menu_items_list">
+								<h3>特惠精选</h3>
+								<p><a href="#" style="color: #f00;">2017秋装新品</a><a href="#">原创新品</a><a href="#">连衣裙</a><a href="#">卫衣</a><a href="#">毛针织衫</a></p>
+							</div>
+							<div class="line1"></div>
+							<div class="menu_items_list">
+								<h3>特惠精选</h3>
+								<p><a href="#" style="color: #f00;">连衣裙</a><a href="#">牛仔裤</a><a href="#">衬衫</a><a href="#" style="color: #f00;">卫衣</a><a href="#">T恤</a><a href="#">休闲裤</a><a href="#">半身裙</a><a href="#">套装</a><a href="#">羽绒服</a><a href="#">毛呢外套</a><a href="#">棉衣</a><a href="#">毛针织衫</a></p>
+							</div>
+							<div class="line1"></div>
+							<div class="menu_items_list">
+								<h3>特惠精选</h3>
+								<p><a href="#">爆款特惠</a><a href="#">女装爆款</a><a href="#">男装爆款</a><a href="#">童装爆款</a><a href="#">妈妈装爆款</a></p>
+							</div>
+							<div class="line1"></div>
+							<div class="menu_items_list">
+								<h3>特惠精选</h3>
+								<p><a href="#">爆款特惠</a><a href="#">拼接</a><a href="#">印花</a><a href="#">爆款特惠</a><a href="#">纯色</a><a href="#">爆款特惠</a><a href="#">复古</a><a href="#">字母</a><a href="#">爆款特惠</a><a href="#">宽松</a><a href="#">几何</a><a href="#">条纹</a><a href="#">修身</a><a href="#">爆款特惠</a></p>
+							</div>
+							<div class="line1"></div>
+						</div>
+						
+					</div>
+					<div class="smenuConin"style="width: 400px;">
+						<div class="menu_items">
+							<div class="menu_items_list">
+								<h3>特惠精选</h3>
+								<p><a href="#">爆款特惠</a><a href="#">拼接</a><a href="#">印花</a><a href="#">爆款特惠</a><a href="#">纯色</a><a href="#">爆款特惠</a><a href="#">复古</a><a href="#">字母</a><a href="#">爆款特惠</a><a href="#">宽松</a><a href="#">几何</a><a href="#">条纹</a><a href="#">修身</a><a href="#">爆款特惠</a></p>
+							</div>
+							<div class="line1"></div>
+							<div class="menu_items_list">
+								<h3>特惠精选</h3>
+								<p><a href="#">爆款特惠</a><a href="#">拼接</a><a href="#">印花</a><a href="#">爆款特惠</a><a href="#">纯色</a><a href="#">爆款特惠</a><a href="#">复古</a><a href="#">字母</a><a href="#">爆款特惠</a><a href="#">宽松</a><a href="#">几何</a><a href="#">条纹</a><a href="#">修身</a><a href="#">爆款特惠</a></p>
+							</div>
+							<div class="line1"></div>
+							<div class="menu_items_list">
+								<h3>特惠精选</h3>
+								<p><a href="#">爆款特惠</a><a href="#">拼接</a><a href="#">印花</a><a href="#">爆款特惠</a><a href="#">纯色</a><a href="#">爆款特惠</a><a href="#">复古</a><a href="#">字母</a><a href="#">爆款特惠</a><a href="#">宽松</a><a href="#">几何</a><a href="#">条纹</a><a href="#">修身</a><a href="#">爆款特惠</a></p>
+							</div>
+							<div class="line1"></div>
+							<div class="menu_items_list_img">
+								<a href="#"><img src="images/index/hstyle.png"/></a>
+								<a href="#"><img src="images/index/sulv.png"/></a>
+								<a href="#"><img src="images/index/nibbuns.png"/></a>
+								<a href="#"><img src="images/index/forqueen.png"/></a>
+								<a href="#"><img src="images/index/nana.png"/></a>
+							</div>
+						</div>
+						
+					</div>
+					<div class="smenuConin"style="width: 400px;top:140px;">
+						<div class="menu_items">
+							<div class="menu_items_list">
+								<h3>特惠精选</h3>
+								<p><a href="#">爆款特惠</a><a href="#">拼接</a><a href="#">印花</a><a href="#">爆款特惠</a><a href="#">纯色</a><a href="#">爆款特惠</a><a href="#">复古</a><a href="#">字母</a><a href="#">爆款特惠</a><a href="#">宽松</a><a href="#">几何</a><a href="#">条纹</a><a href="#">修身</a><a href="#">爆款特惠</a></p>
+							</div>
+							<div class="line1"></div>
+							<div class="menu_items_list">
+								<h3>特惠精选</h3>
+								<p><a href="#">爆款特惠</a><a href="#">拼接</a><a href="#">印花</a><a href="#">爆款特惠</a><a href="#">纯色</a><a href="#">爆款特惠</a><a href="#">复古</a><a href="#">字母</a><a href="#">爆款特惠</a><a href="#">宽松</a><a href="#">几何</a><a href="#">条纹</a><a href="#">修身</a><a href="#">爆款特惠</a></p>
+							</div>
+							<div class="line1"></div>
+							<div class="menu_items_list">
+								<h3>特惠精选</h3>
+								<p><a href="#">爆款特惠</a><a href="#">拼接</a><a href="#">印花</a><a href="#">爆款特惠</a><a href="#">纯色</a><a href="#">爆款特惠</a><a href="#">复古</a><a href="#">字母</a><a href="#">爆款特惠</a><a href="#">宽松</a><a href="#">几何</a><a href="#">条纹</a><a href="#">修身</a><a href="#">爆款特惠</a></p>
+							</div>
+							<div class="line1"></div>
+							<div class="menu_items_list_img">
+								<a href="#"><img src="images/index/nibbuns.png"/></a>
+								<a href="#"><img src="images/index/hstyle.png"/></a>
+							</div>
+						</div>
+						
+					</div>
+					<div class="smenuConin"style="width: 400px;top: 300px;">
+							<div class="menu_items">
+							<div class="menu_items_list">
+								<h3>特惠精选</h3>
+								<p><a href="#">爆款特惠</a><a href="#">拼接</a><a href="#">印花</a><a href="#">爆款特惠</a><a href="#">纯色</a><a href="#">爆款特惠</a><a href="#">复古</a><a href="#">字母</a><a href="#">爆款特惠</a><a href="#">宽松</a><a href="#">几何</a><a href="#">条纹</a><a href="#">修身</a><a href="#">爆款特惠</a></p>
+							</div>
+							<div class="line1"></div>
+							<div class="menu_items_list_img">
+								<a href="#"><img src="images/index/forqueen.png"/></a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		
+		<!--login-->
+		<div id="hlogin">
+			<div class="hloginImg_left">
+				<img src="images/sub/410-290.png"/>
+			</div>
+			<div class="hlogin_right">
+				<div class="login_form">
+					<h1>用户登录</h1>
+					<form name="formLogin" action="" method="post">
+					 	<p>用户名：<input type="text" value="邮箱地址/手机号" onfocus="if (value =='邮箱地址/手机号'){value =''}" onblur="if (value ==''){value='邮箱地址/手机号'}" /></p>
+					 	
+					 	<p>密码：<input type="password"  /></p>
+					 	<p>验证码：<input type="text"  /></p>
+					 	<div>color: #c80a28;
+    margin: 10px 0;</div>
+					 	<p class="psub"><input type="submit" value="立刻登录"/><input type="checkbox" name="" value="" />保存登录信息</p>
+					 	<p><a href="#">注册</a>&nbsp;|&nbsp;<a href="#">忘记密码</a></p>
+					 	
+					 </form>
+				</div>
+				<div class="login_other">
+					<div class="login_other_title">
+						其他登录方式:
+					</div>
+					<div class="login_other_btn">
+						<a href="#"><span></span></a>
+						<a href="#"><span style="background-position:-111px -528px ;"></span></a>
+						<a href="#"><span style="background-position:-222px -528px ;"></span></a>
+						<a href="#"><span style="background-position:-333px -528px ;"></span></a>
+					</div>
+				</div>
+			</div>
+		</div>
+		
+		<!--尾部-->
+		<div id="hfooter">
+			<div class="footer_info">
+				<dl>
+					<dt></dt>
+					<dd><a href="#">用户注册</a></dd>
+					<dd><a href="#">购物流程</a></dd>
+					<dd><a href="#">网站导航</a></dd>
+					<dd><a href="#">帮助中心</a></dd>
+				</dl>
+				<dl>
+					<dt style="background-position: -11px -34px;"></dt>
+					<dd><a href="#">在线支付</a></dd>
+					<dd><a href="#">扫码支付</a></dd>
+					<dd><a href="#">优惠券支付</a></dd>
+				</dl>
+				<dl>
+					<dt style="background-position: 0  -67px;"></dt>
+					<dd><a href="#">配送说明</a></dd>
+					<dd><a href="#">运费说明</a></dd>
+					<dd><a href="#">验货签收</a></dd>
+				</dl>
+				<dl>
+					<dt style="background-position: -6px -100px;"></dt>
+					<dd><a href="#">退换货政策</a></dd>
+					<dd><a href="#">退换货流程</a></dd>
+				</dl>
+				<dl>
+					<dt style="background-position: -7px -133px;"></dt>
+					<dd><a href="#">会员制度</a></dd>
+					<dd><a href="#">会员积分</a></dd>
+				</dl>
+				<dl>
+					<dt style="background-position: -9px -202px;"></dt>
+					<dd><a href="#">品牌故事</a></dd>
+					<dd><a href="#">媒体报道</a></dd>
+					<dd><a href="#">诚聘英才</a></dd>
+					<dd><a href="#">联系我们</a></dd>
+				</dl>
+			</div>
+			<div class="footer_black">
+				<a href="#">首页</a>&nbsp;&nbsp;|&nbsp;&nbsp;
+				<a href="#">品牌故事</a>&nbsp;&nbsp;|&nbsp;&nbsp;
+				<a href="#">诚聘英才</a>&nbsp;&nbsp;|&nbsp;&nbsp;
+				<a href="#">媒体报道</a>&nbsp;&nbsp;|&nbsp;&nbsp;
+				<a href="#">联系我们</a>&nbsp;&nbsp;|&nbsp;&nbsp;
+				<a href="#">网站地图</a>&nbsp;&nbsp;|&nbsp;&nbsp;
+				<a href="#">友情链接</a>
+			</div>
+			<center class="footer_copyright">
+				<span>
+					<img src="images/index/copyright.gif"/>
+					鲁ICP备14003322号-2 © 2015-2017 handu.com All Rights Reserved. <a href="#"><img src="images/index/beiantubiao.png"/>鲁公网安备 37010202000113号</a> 韩都衣舍电子商务集团股份有限公司，禁止非法复制<img src="images/index/pic.gif" alt="" />
+				</span>
+				<center>
+					<a href="#"><img src="images/index/zxmbutton02_sy.jpg"/></a>
+					<a href="#"><img src="images/index/zxmbutton05_sy.jpg"/></a>
+					<a href="#"><img src="images/index/cctv.png"/></a>
+				</center>
+			</center>
+		</div>
+		
+		<script type="text/javascript" src="js/jquery-1.11.3.js" ></script>
+		<script type="text/javascript" src="js/bootstrap.js" ></script>
+		<script type="text/javascript">
+			$(function(){
+//				顶部导航鼠标经过显示列表
+				$('#wangzhangdh,#wangzhangBox').mouseenter(function(){
+					$('#wangzhangBox').css('display','block');
+					$('.webdh').css('display','block');
+				});
+//				顶部导航鼠标移出显示列表
+				$('#wangzhangdh,#wangzhangBox').mouseleave(function(){
+					$('#wangzhangBox').css('display','none');
+					$('.webdh').css('display','none');
+				});
+				
+				$('.sPli h2,.sPli_list').mouseenter(function(){
+					$('.sPli .sPli_list').css('display','block');
+				});
+				$('.sPli h2,.sPli_list').mouseleave(function(){
+					$('.sPli .sPli_list').css('display','none');
+				});
+//				获取商品列表的li
+				var $lis = $('.sPli .sPli_list li');
+//				获取右侧鼠标经过显示的div
+				var $divsP = $('.sPli_menu .smenuConin');
+//				遍历li循环加鼠标移入移出事件
+				$lis.each(function(){
+					var that = this;
+//					alert(this);
+//					$(this).hover(function(){
+//						$divsP.eq($lis.index($(this))).addClass('sConinhover');
+////						alert($lis.index($(this)));
+//					},function(){
+//						$divsP.eq($lis.index($(this))).removeClass('sConinhover');
+//					});
+
+//					鼠标移出li时,右侧的div显示
+
+					$(this).mouseenter(function(){
+						$(this).css({background:'#333'});
+						$(this).find('a').css({color:'#fff'});
+						$(this).find('h3').css({color:'#fff'});
+						$(this).find('img').eq(0).css({display:'none'});
+						$(this).find('img').eq(1).css({display:'block'});
+						
+						$divsP.eq($lis.index($(this))).addClass('sConinhover');
+					});
+					
+//					鼠标移入右侧的div,自身显示
+					$($divsP.eq($lis.index($(this)))).mouseenter(function(){
+						
+						$(that).css({background:'#333'});
+						$(that).find('a').css({color:'#fff'});
+						$(that).find('h3').css({color:'#fff'});
+						$(that).find('img').eq(0).css({display:'none'});
+						$(that).find('img').eq(1).css({display:'block'});
+						
+						$(this).addClass('sConinhover');
+					});
+					
+//					鼠标离开li,右侧的div隐藏
+					$(this).mouseleave(function(){
+						$(this).css({background:'#e3e3e3'});
+						$(this).find('a').css({color:'#333'});
+						$(this).find('h3').css({color:'#333'});
+						$(this).find('img').eq(0).css({display:'block'});
+						$(this).find('img').eq(1).css({display:'none'});
+						
+						$divsP.eq($lis.index($(this))).removeClass('sConinhover');
+						
+					});
+//					鼠标离开右侧的div,自身隐藏
+					$($divsP.eq($lis.index($(this)))).mouseleave(function(){
+						$(that).css({background:'#e3e3e3'});
+						$(that).find('a').css({color:'#333'});
+						$(that).find('h3').css({color:'#333'});
+						$(that).find('img').eq(0).css({display:'block'});
+						$(that).find('img').eq(1).css({display:'none'});
+						$(this).removeClass('sConinhover');
+					});
+					
+				})
+				
+//			
+			
+			})
+		</script>
+	</body>
+</html>
