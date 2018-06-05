@@ -1183,8 +1183,123 @@
         }
     }
 }
+//商品详情
+#detail_wrap{
+    width: 1200px;
+    height: auto;
+    min-height: 430px;
+    margin: 0 auto;
+    overflow: hidden;
+    padding: 5px 0;
+    font-size: 12px;
+//  头部
+    .hdw_header{
+        margin-bottom: 20px;
+        margin-top: 10px;
+        color: #333;
+        span{
+            padding: 0 6px;
+        }
+        a:hover{
+           text-decoration: none;
+        }
+    }
+//  侧边
+    .side_bar{
+        width: 175px;
+        height: auto;
+        float: left;
+        margin-right: 15px;
+        .classification{
+            width: 170px;
+            height: auto;
+            overflow: hidden;
+            margin: 5px 0;
+            list-style-type: circle;
+            h1{
+                background: url(../images/sub/cate0.png) no-repeat top center;
+                text-indent: -999px;
+            }
+            li{
+                float: left;
+                width: 134px;
+                height: 27px;
+                border-top: 0;
+                text-align: left;
+                padding-left: 27px;
+                list-style: url(../images/sub/menu_arr.png) inside;
+                a{
+                    color: #666;
+                    line-height: 30px;
+                }
+                a:hover{
+                    color:#c80a28;
+                    text-decoration: none;
+                }
+            }
+        }
+        .pList{
+            width: 170px;
+            height: auto;
+            margin-top: 30px;
+            overflow: hidden;
+            h1{
+                width: 100%;
+                height: 19px;
+                margin-bottom: 5px;
+                background: url(../images/sub/new.png) no-repeat;
+            }
+            >ul{
+                width: 158px;
+                padding: 5px;
+                overflow: hidden;
+                border: solid 1px #ddd;
+                .pList_item{
+                    width: 100%;
+                    margin: 0px;
+                    border: none;
+                    margin-bottom: 10px;
+                    border-bottom: dashed 1px #ddd;
+                    background: #fff;
+                    float: left;
+                    height: auto;
+                    overflow: hidden;
+                    img{
+                        width: 158px;
+                        height: 150px;
+                        float: left;
+                    }
+                    p{
+                        width: 100%;
+                        float: left;
+                        margin: 0;
+                        margin-top: 5px;
+                        text-align: center;
+                        span{
+                            padding: 0 3px;
+                            font-size: 14px;
+                        }
+                    }
+                }
+            }
+        }
+        .p_hot{
+            h1{
+                 background: url(../images/sub/hot.png) no-repeat;
+            }
+        }
+    }
+    
+//  放大
+    .product_detail{
+        width: 84%;
+        max-width: 1000px;
+        height: auto;
+        float: left;
+        min-height: 600px;
+    }
 
-
+}
 
 
 
