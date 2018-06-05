@@ -919,7 +919,7 @@
                     margin-top: 10px;
                     color: #393939;
                     font-size: 14px;
-                    line-height: 33px;
+                    line-height: 30px;
                     input{
                         width: 207px;
                         font-size: 12px;
@@ -1133,6 +1133,21 @@
                         margin: 3px 0 0 5px;
                         color: #7b7b7b;
                         border: none;
+                    }
+                    .yanzm{
+                        float: left;
+                        width: 60px;
+                        height: 30px;
+                        background: #EBCCCC;
+                        text-align: center;
+                        color:#5E8E3D;
+                        font-size: 18px;
+                    }
+                    .regist_list_tishi{
+                        float: left;
+                        color: #bf0000;
+                        text-align: right;
+                        margin-top: 3px;
                     }
                     .regist_list_con{
                         float: left;

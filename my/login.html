@@ -24,8 +24,8 @@
 				<div class="nav_right">
 					<ul class="nav_ulr_left">
 						<li>您好，欢迎光临韩都衣舍！</li>
-						<li><a href="#">登录</a></li>
-						<li><a href="#">注册</a></li>
+						<li><a href="login.html">登录</a></li>
+						<li><a href="regist.html">注册</a></li>
 						<li><a href="#">购物车</a></li>
 						
 					</ul>
@@ -351,15 +351,15 @@
 			<div class="hlogin_right">
 				<div class="login_form">
 					<h1>用户登录</h1>
-					<form name="formLogin" action="" method="post">
+					<form name="formLogin" action="index.html" method="post" class="form_login">
 					 	<p>用户名：<input type="text" value="邮箱地址/手机号" onfocus="if (value =='邮箱地址/手机号'){value =''}" onblur="if (value ==''){value='邮箱地址/手机号'}" /></p>
 					 	
 					 	<p>密码：<input type="password"  /></p>
-					 	<p>验证码：<input type="text"  /></p>
-					 	<div>color: #c80a28;
-    margin: 10px 0;</div>
+					 	<p>验证码：<input type="text"    style="width: 120px;"/><span style="float:right;width: 60px;height: 30px;background: #EBCCCC;margin-right: 30px;text-align: center;color: #5E8E3D;font-size: 18px;" class="yanzhengm"></span></p>
+					 	<div class="msg" style="color: #c80a28;
+    margin: 10px 0;"></div>
 					 	<p class="psub"><input type="submit" value="立刻登录"/><input type="checkbox" name="" value="" />保存登录信息</p>
-					 	<p><a href="#">注册</a>&nbsp;|&nbsp;<a href="#">忘记密码</a></p>
+					 	<p><a href="regist.html">注册</a>&nbsp;|&nbsp;<a href="#">忘记密码</a></p>
 					 	
 					 </form>
 				</div>
@@ -453,6 +453,63 @@
 					$('#wangzhangBox').css('display','none');
 					$('.webdh').css('display','none');
 				});
+				
+//				登录验证
+//				随机生成验证码
+				function yanz(){
+					var str = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
+				var newStr = "";
+				for(var i = 0;i < 4;i ++){
+					newStr += str.charAt(Math.floor(Math.random() * str.length));
+				}
+				return newStr;
+				}
+				$('.yanzhengm').html(yanz());
+				$('.yanzhengm').click(function(){
+					$(this).html(yanz());
+				})
+				
+				var $inps = $('.form_login').children().find('input');
+				var flag = false;
+
+			$inps.eq(3).click(function(){
+				
+//				验证邮箱
+				
+				var reg1 = /\w[-\w.+]*@([A-Za-z0-9][-A-Za-z0-9]+\.)+[A-Za-z]{2,14}/;
+				if(!reg1.test($inps.eq(0).val())){
+					$(".msg").html("请输入正确的用户名");alert($inps.eq(0).val());
+				}else{
+					$(".msg").html("");
+				}
+				
+//				验证密码
+			
+				var reg2 = /^(?![0-9]+$)(?![a-zA-Z]+$)[0-9A-Za-z]{8,24}$/;
+				if(!reg2.test($inps.eq(1).val())){
+					$(".msg").html("请输入正确的密码");
+				}else{
+					$(".msg").html("");
+				}
+//				验证码
+				if($inps.eq(2).val() == ''){
+					$(".msg").html("验证码不能为空");
+				}else if($inps.eq(2).val().toUpperCase() != $(".yanzhengm").html().toUpperCase()){
+					$(".msg").html("验证码错误");
+				}else{
+					$('.msg').html('');
+				}
+				if($('.msg').html() == ''){
+					flag = true;
+				}
+				if(!flag){
+					$('.form_login').submit(function(){
+						return false;
+					})
+					
+				}
+			})
+				
 				
 				$('.sPli h2,.sPli_list').mouseenter(function(){
 					$('.sPli .sPli_list').css('display','block');

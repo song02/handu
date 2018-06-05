@@ -24,8 +24,8 @@
 				<div class="nav_right">
 					<ul class="nav_ulr_left">
 						<li>您好，欢迎光临韩都衣舍！</li>
-						<li><a href="#">登录</a></li>
-						<li><a href="#">注册</a></li>
+						<li><a href="login.html">登录</a></li>
+						<li><a href="regist.html">注册</a></li>
 						<li><a href="#">购物车</a></li>
 						
 					</ul>
@@ -423,14 +423,16 @@
 							</li>
 						</ul>
 					</form>
-					<form action="" method="post">
+					<form action="login.html" method="post" class="form_email">
 						<ul class="regist_right_list">
 							<li>
 								<div class="regist_rN">
 									Email：
 								</div>
 								<input type="text" size="25" maxlength="11" autocomplete="off" class="regist_list_txt">
-								
+								<div class="regist_list_tishi">
+									
+								</div>
 							</li>
 							<li>
 								<div class="regist_list_con">
@@ -442,7 +444,10 @@
 								<div class="regist_rN">
 									密码：
 								</div>
-								<input type="text" size="25" maxlength="11" autocomplete="off" class="regist_list_txt">
+								<input type="password" size="25" maxlength="11" autocomplete="off" class="regist_list_txt">
+								<div class="regist_list_tishi">
+									
+								</div>
 							</li>
 							<li>
 								<div class="regist_list_con">
@@ -453,7 +458,10 @@
 								<div class="regist_rN">
 									确认密码：
 								</div>
-								<input type="text" size="25" maxlength="11" autocomplete="off" class="regist_list_txt">
+								<input type="password" size="25" maxlength="11" autocomplete="off" class="regist_list_txt">
+								<div class="regist_list_tishi">
+									
+								</div>
 							</li>
 							<li>
 								<div class="regist_list_con">
@@ -464,7 +472,10 @@
 								<div class="regist_rN">
 									验证码：
 								</div>
-								<input type="text" id="captcha" name="captcha" style="width:115px;height: 30px;border: 1px solid #dedede;">
+								<input type="text" id="captcha" name="captcha" style="width:115px;height: 30px;border: 1px solid #dedede;float: left;margin-right: 5px;">
+								<div class="yanzm">
+									
+								</div>
 							</li>
 							<li>
 								<div class="regist_xieyi">
@@ -473,7 +484,7 @@
 								</div>
 							</li>
 							<li>
-								<input id="reg_mobile_submit" type="submit" class="regist_list_regree" value="同意协议并注册">
+								<input id="reg_email_submit" type="submit" class="regist_list_regree" value="同意协议并注册">
 							</li>
 						</ul>
 					</form>
@@ -547,6 +558,7 @@
 		
 		<script type="text/javascript" src="js/jquery-1.11.3.js" ></script>
 		<script type="text/javascript" src="js/bootstrap.js" ></script>
+		<script type="text/javascript" src="js/jquery.cookie.js"></script>
 		<script type="text/javascript">
 			$(function(){
 //				顶部导航鼠标经过显示列表
@@ -632,8 +644,85 @@
 					});
 					
 				})
+//				注册验证
+
+//			随机生成验证码
+				function yanz(){
+					var str = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
+				var newStr = "";
+				for(var i = 0;i < 4;i ++){
+					newStr += str.charAt(Math.floor(Math.random() * str.length));
+				}
+				return newStr;
+				}
+				$('.yanzm').html(yanz());
+				$('.yanzm').click(function(){
+					$(this).html(yanz());
+				})
+//				获取email注册的外层div
+			var $eDiv = $('.regist_right_list').eq(1).children();
+//			获取输入框
+			var $inps = $eDiv.find('.regist_list_txt');
+//			标志
+			var flag = false;
+//			验证邮箱
+			$inps.eq(0).blur(function(){
+//				var reg = /^\w+@[0-9a-z]+\.[a-z]+$/;
+				var reg = /\w[-\w.+]*@([A-Za-z0-9][-A-Za-z0-9]+\.)+[A-Za-z]{2,14}/;
+				var okimg = $('<img src="images/sub/keyizhuce.gif"/>');
+				var $email = $(this).val();
+				if($email == ''){
+					$(this).next().html("请输入E-mail").addClass('regist_list_tishi');
+				}else if(!reg.test($email)){
+					$(this).next().html("E-mail格式不正确").addClass('regist_list_tishi');
+					
+				}else{
+					$(this).next().html(okimg);
+				}
 				
-			
+			})
+//			验证密码
+			$inps.eq(1).blur(function(){
+				var reg = /^(?![0-9]+$)(?![a-zA-Z]+$)[0-9A-Za-z]{8,24}$/;
+				var okimg = $('<img src="images/sub/keyizhuce.gif"/>');
+				var $pwd = $(this).val();
+				if($pwd.length < 8){
+					$(this).next().html("密码长度不能小于8位");
+				}else if(!reg.test($pwd)){
+					$(this).next().html("密码格式不正确");
+					
+				}else{
+					$(this).next().html(okimg);
+				}
+				
+			})
+			$inps.eq(2).blur(function(){
+				var reg = /^(?![0-9]+$)(?![a-zA-Z]+$)[0-9A-Za-z]{8,24}$/;
+				var okimg = $('<img src="images/sub/keyizhuce.gif"/>');
+				var $repwd = $(this).val();
+				if($repwd.length < 8){
+					$(this).next().html("密码长度不能小于8位");
+				}else if(!reg.test($repwd)){
+					$(this).next().html("密码格式不正确");
+					
+				}else if($inps.eq(1).val() == $repwd){
+					$(this).next().html(okimg);
+				}
+				
+			})
+			$('#reg_email_submit').click(function(){
+				if($('.regist_list_tishi img').length == 3 && ($('#captcha').val().toUpperCase() == $(".yanzm").html().toUpperCase())){
+					flag = true;
+					
+				}
+				if(!flag){
+					$('.form_email').submit(function(){
+						return false;
+					})
+					
+				}
+			})
+		
 			})
 		</script>
 	</body>
