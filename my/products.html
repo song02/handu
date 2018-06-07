@@ -5,6 +5,7 @@
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
     	<meta name="viewport" content="width=device-width, initial-scale=1">
 		<title>韩都衣舍</title>
+		<link rel="stylesheet" type="text/css" href="css/base.css"/>
 		<link rel="stylesheet" href="css/bootstrap.css" />
 		<link rel="stylesheet" type="text/css" href="css/index.min.css"/>
 		
@@ -446,16 +447,113 @@
 				</a>
 				
 			</div>
-		</div>
 		
-		<!--中间放大-->
+			<!--中间放大-->
 		<!--<div class="product_detail">
 			<div class="product_top">
-				
-			</div>
-		</div>-->
-		
-		
+				<!--左边图-->
+				<!--<div class="pt_left">
+					<div class="pt_left_con">
+						<div class="pt_left_con_t">
+							<a href="#">-->
+								<!--小图-->
+								<!--<div class="pimgx">
+									<img width="480px" src="images/sub/20180130110154_NW9875.jpg"/>
+									<div class="zoomPup" style="top: -1px; left: -1px; width: 288px; height: 288px; position: absolute; border-width: 1px; display: none;">
+									</div>
+									<div class="zoommark"></div>
+								</div>-->
+								<!--大图-->
+								<!--<div class="pimgd" style="position: absolute; z-index: 5001; left: 490px; top: 0px; display: none;">
+									<div class="zoomWrapper" style="width: 480px;">
+										<div class="zoomWrapperTitle" style="width: 100%; position: absolute; ">
+											商品大图
+										</div>
+										<div class="zoomWrapperImage" style="width: 100%; height: 480px;">
+											<img src="images/sub/20180130110154_NW9875.jpg" style="position: absolute; border: 0px; display: block; left: 0px; top: -320px;">
+										</div>
+									</div>
+								</div>
+							</a>
+						</div>
+						<ul class="pt_left_con_list">
+							<li>
+								<a href="#">
+									<img src="images/sub/1517282155650162821.jpg"/>
+								</a>
+							</li>
+							<li>
+								<a href="#">
+									<img src="images/sub/1517282155613779677.jpg"/>
+								</a>
+							</li>
+							
+							<li>
+								<a href="#">
+									<img src="images/sub/1517282156897625513.jpg"/>
+								</a>
+							</li>
+							<li>
+								<a href="#">
+									<img src="images/sub/1517282156771283413.jpg"/>
+								</a>
+							</li>
+							<li>
+								<a href="#">
+									<img src="images/sub/1517282156656714120.jpg"/>
+								</a>
+							</li>
+						</ul>
+					</div>
+				</div>-->
+				<!--商品详情-->
+				<!--<div class="pt_right">
+					
+					</div>
+				</div>
+			</div>-->
+			
+			<div class="right-extra" style="margin-left:260px;">
+  <!--产品参数开始-->
+ 
+    <div id="preview" class="spec-preview" style="width: 950px;height: 492px;">
+    	<span class="jqzoom">
+    		<img jqimg="images/sub/20180130110154_NW9875.jpg" src="images/sub/20180130110154_NW9875.jpg" width="480px"/>
+    	</span>
+    </div>
+    <!--缩图开始-->
+    <div class="spec-scroll">
+      <div class="items" style="top: -2360px;">
+        <ul>
+          <li><img src="images/sub/1517282155650162821.jpg" onmousemove="preview(this);"></li>
+          <li><img src="images/sub/1517282155613779677.jpg" onmousemove="preview(this);"></li>
+          <li><img src="images/sub/1517282156897625513.jpg" onmousemove="preview(this);"></li>
+          <li><img src="images/sub/1517282156771283413.jpg" onmousemove="preview(this);"></li>
+          <li><img src="images/sub/1517282156656714120.jpg" onmousemove="preview(this);"></li>
+         
+        </ul>
+      </div>
+    </div>
+    <!--缩图结束-->
+
+  <!--产品参数结束-->
+  <div style="clear:both;height:10px;"></div>
+  <div class="m" id="comment">
+    <ul class="tab clearfix">
+      <li onclick="tabs('#comment',0)" class="curr">图文介绍<strong></strong><span></span></li>
+      <li onclick="tabs('#comment',1)">评论<strong>(1)</strong><span></span></li>
+    </ul>
+    <div class="mc tabcon hide" style="display:block;">
+      <div class="norecode"> 暂无好评！</div>
+    </div>
+   
+      </div>
+    </div>
+  </div>
+</div>
+
+			
+		</div>	
 		
 		<!--尾部-->
 		<div id="hfooter">
@@ -523,74 +621,73 @@
 		<script type="text/javascript" src="js/bootstrap.js" ></script>
 		<script type="text/javascript" src="js/jquery.jqzoom.js" ></script>
 		<script type="text/javascript" src="js/base.js" ></script>
-		
 		<script type="text/javascript">
 			$(function(){
+				
 //				顶部导航鼠标经过显示列表
+
 				$('#wangzhangdh,#wangzhangBox').mouseenter(function(){
 					$('#wangzhangBox').css('display','block');
 					$('.webdh').css('display','block');
 				});
+				
 //				顶部导航鼠标移出显示列表
+
 				$('#wangzhangdh,#wangzhangBox').mouseleave(function(){
 					$('#wangzhangBox').css('display','none');
 					$('.webdh').css('display','none');
 				});
 				
-//				登录验证
-//				随机生成验证码
-				function yanz(){
-					var str = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
-				var newStr = "";
-				for(var i = 0;i < 4;i ++){
-					newStr += str.charAt(Math.floor(Math.random() * str.length));
-				}
-				return newStr;
-				}
-				$('.yanzhengm').html(yanz());
-				$('.yanzhengm').click(function(){
-					$(this).html(yanz());
-				})
+//				放大功能
+				//获取大盒子
+			let oBigDiv = $(".pt_left_con");
+			//获取小图所在的盒子
+			let oSmallPic = $('.pimgx');
+			//获取遮罩层
+			let oMark = $('.zoommark');
+			//获取滑块
+			let oFloat = $('.zoomPup');
+			//获取大图所在的盒子
+			let oBigPic = $('.pimgd');
+			//获取大图
+			let oBigImage = $('.zoomWrapperImage img');
+			//给遮罩层加鼠标移入事件
+			oMark.mouseenter(function(){
+				oFloat.css('display','block');
+				oBigPic.css('display','block');
+			})
+			//给遮罩层加鼠标移出事件
+			oMark.mouseleave(function(){
+				oFloat.css('display','none');
+				oBigPic.css('display','none');
+			})
+			//鼠标跟随
+			oMark.mousemove(function(e){
 				
-				var $inps = $('.form_login').children().find('input');
-				var flag = false;
-
-			$inps.eq(3).click(function(){
+				let left = e.pageX - oBigDiv.offset().left - oMark.offset().left - oFloat.width() / 2;
+				let top = e.pageY - oBigDiv.offset().top - oMark.offset().top - oFloat.height() / 2;
+				//设置边界
+				if(left <= oMark.offset().left){
+					left = oMark.offset().left;
+				}else if(left >= oMark.width() - oFloat.width()){
+					left = oMark.width() - oFloat.width();
+				}
+				if(top <= oMark.offset().top){
+					top = oMark.offset().top;
+				}else if(top >= oMark.height() - oFloat.height()){
+					top = oMark.height() - oFloat.height();
+				}
+//				console.log(left);
+				oFloat.css('left',left);
+				oFloat.css('top',top);
 				
-//				验证邮箱
 				
-				var reg1 = /\w[-\w.+]*@([A-Za-z0-9][-A-Za-z0-9]+\.)+[A-Za-z]{2,14}/;
-				if(!reg1.test($inps.eq(0).val())){
-					$(".msg").html("请输入正确的用户名");alert($inps.eq(0).val());
-				}else{
-					$(".msg").html("");
-				}
-				
-//				验证密码
-			
-				var reg2 = /^(?![0-9]+$)(?![a-zA-Z]+$)[0-9A-Za-z]{8,24}$/;
-				if(!reg2.test($inps.eq(1).val())){
-					$(".msg").html("请输入正确的密码");
-				}else{
-					$(".msg").html("");
-				}
-//				验证码
-				if($inps.eq(2).val() == ''){
-					$(".msg").html("验证码不能为空");
-				}else if($inps.eq(2).val().toUpperCase() != $(".yanzhengm").html().toUpperCase()){
-					$(".msg").html("验证码错误");
-				}else{
-					$('.msg').html('');
-				}
-				if($('.msg').html() == ''){
-					flag = true;
-				}
-				if(!flag){
-					$('.form_login').submit(function(){
-						return false;
-					})
-					
-				}
+				//计算滑块在小图中移动的比例
+				let pX = left / (oMark.width() - oFloat.width());
+				let pY = top / (oMark.height() - oFloat.height());
+				//设置大图的移动
+				oBigImage.css('left',- pX * (oBigImage.width() - oBigPic.width()));
+				oBigImage.css('top', - pY * (oBigImage.height() - oBigPic.height()));
 			})
 				
 				
@@ -662,7 +759,6 @@
 					
 				})
 				
-//			
 			
 			})
 		</script>

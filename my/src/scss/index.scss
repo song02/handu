@@ -1297,6 +1297,125 @@
         height: auto;
         float: left;
         min-height: 600px;
+        .product_top{
+            min-width: 900px;
+            height: auto;
+            border: 1px solid #ededed;
+//          左边图
+            .pt_left{
+                border-right: 1px solid #ededed;
+                margin-right: 10px;
+                width: 481px;
+                float: left;
+                .pt_left_con{
+                    width: 480px;
+                    max-width: 480px;
+                    height: auto;
+                    min-height: 600px;
+                    position: relative;
+                    text-align: center;
+                    .pt_left_con_t{
+                        width: 100%;
+                        min-height: 480px;
+                        height: auto;
+                        position: relative;
+                        a{
+                            outline-style: none;
+                            position: relative;
+                            display: inline-block;
+                            text-decoration: none;
+//                          小图
+                            .pimgx{
+                                position: relative;
+                                float: left;
+                                z-index: 99;
+                                cursor: crosshair;
+                                .zoomPup{
+                                        overflow: hidden;
+                                        background-color: #FFF;
+                                        opacity: 0.6;
+                                        position: absolute;
+                                        border: 1px solid #CCC;
+                                        z-index: 101;
+                                        cursor: crosshair;
+                                }
+                                .zoommark{
+                                    width: 480px;
+                                    height: 480px;
+                                    position: absolute;
+                                    top: 0;
+                                    left: 0;
+                                    z-index: 102;
+                                }
+                            }
+//                          大图
+                            .pimgd{
+                                background: #fff;
+                                height: auto;
+                                .zoomWrapper{
+                                    position: relative;
+                                    border: 1px solid #DDD;
+                                    z-index: 110;
+                                    .zoomWrapperTitle{
+                                        background: #999;
+                                        color: #FFF;
+                                        height: 18px;
+                                        line-height: 18px;
+                                        overflow: hidden;
+                                        text-align: center;
+                                        font-size: 10px;
+                                        top: 0px;
+                                        left: 0px;
+                                        z-index: 120;
+                                        -moz-opacity: 0.6;
+                                        opacity: 0.6;
+                                    }
+                                    .zoomWrapperImage{
+                                        display: block;
+                                        position: relative;
+                                        overflow: hidden;
+                                        z-index: 110;
+                                        img{
+                                            z-index: 101;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    .pt_left_con_list{
+                        z-index: 1000;
+                        overflow: hidden;
+                        padding-top: 10px;
+                        display: inline-block;
+                        text-align: left;
+                        li{
+                            float: left;
+                            margin-right: 5px;
+                            cursor: pointer;
+                            border: 1px solid #FFF;
+                            display: block;
+                            a{
+                                display: inline-block;
+                                opacity: 1;
+                                border: 1px solid #c80a28;
+                                padding: 0px;
+                                img{
+                                    background: #FFF;
+                                    width: 70px;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            .pt_right{
+                float: left;
+                width: 500px;
+                height: 600px;
+                border: 1px solid #ededed;
+            }
+        }
     }
 
 }

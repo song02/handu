@@ -13,6 +13,6 @@ gulp.task('js',function(){
 	gulp.src('src/js/*.js').pipe(uglify()).pipe(rename({"suffix":".min"})).pipe(concat("index.min.js")).pipe(gulp.dest('js'));
 });
 
-gulp.task('watch',function(){
+gulp.task('default',function(){
 	gulp.watch(['src/scss/*.scss','src/js/*.js'],['sass','js']);
 });

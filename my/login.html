@@ -441,6 +441,7 @@
 		
 		<script type="text/javascript" src="js/jquery-1.11.3.js" ></script>
 		<script type="text/javascript" src="js/bootstrap.js" ></script>
+		<script type="text/javascript" src="js/jquery.cookie.js" ></script>
 		<script type="text/javascript">
 			$(function(){
 //				顶部导航鼠标经过显示列表
@@ -471,43 +472,75 @@
 				
 				var $inps = $('.form_login').children().find('input');
 				var flag = false;
-
+//				$inps.eq(0).blur(function(){
+//					//验证邮箱
+//					var reg1 = /\w[-\w.+]*@([A-Za-z0-9][-A-Za-z0-9]+\.)+[A-Za-z]{2,14}/;
+//					if(!reg1.test($inps.eq(0).val())){
+//						$(".msg").html("请输入正确的用户名");
+//						flag = 1;
+//					}else{
+//						$(".msg").html("");
+//					}
+//				})
+//				$inps.eq(1).blur(function(){
+//					//验证密码
+//					var reg2 = /^(?![0-9]+$)(?![a-zA-Z]+$)[0-9A-Za-z]{8,24}$/;
+//					if(!reg2.test($inps.eq(1).val())){
+//						$(".msg").html("请输入正确的密码");
+//						flag = 2;
+//					}else{
+//						$(".msg").html("");
+//					}
+//				})
+//				$inps.eq(2).blur(function(){
+//					//验证码
+//				if($inps.eq(2).val() == ''){
+//					$(".msg").html("验证码不能为空");
+//					flag = 3;
+//				}else if($inps.eq(2).val().toUpperCase() != $(".yanzhengm").html().toUpperCase()){
+//					$(".msg").html("验证码错误");
+//					flag = 4;
+//				}else{
+//					$('.msg').html('');
+//				}
+//				})
 			$inps.eq(3).click(function(){
-				
-//				验证邮箱
-				
-				var reg1 = /\w[-\w.+]*@([A-Za-z0-9][-A-Za-z0-9]+\.)+[A-Za-z]{2,14}/;
-				if(!reg1.test($inps.eq(0).val())){
-					$(".msg").html("请输入正确的用户名");alert($inps.eq(0).val());
-				}else{
-					$(".msg").html("");
-				}
-				
-//				验证密码
-			
-				var reg2 = /^(?![0-9]+$)(?![a-zA-Z]+$)[0-9A-Za-z]{8,24}$/;
-				if(!reg2.test($inps.eq(1).val())){
-					$(".msg").html("请输入正确的密码");
-				}else{
-					$(".msg").html("");
-				}
-//				验证码
-				if($inps.eq(2).val() == ''){
+				//验证邮箱
+					var reg1 = /\w[-\w.+]*@([A-Za-z0-9][-A-Za-z0-9]+\.)+[A-Za-z]{2,14}/;
+					//验证密码
+					var reg2 = /^(?![0-9]+$)(?![a-zA-Z]+$)[0-9A-Za-z]{8,24}$/;
+				if($inps.eq(0).val() == '' || !(reg1.test($inps.eq(0).val()))){
+					$('.msg').html('请输入正确的用户名');
+				}else if($inps.eq(1).val() == '' || !(reg2.test($inps.eq(1).val()))){
+					$('.msg').html('请输入正确的密码');
+				}else if($inps.eq(2).val() == ''){
 					$(".msg").html("验证码不能为空");
+				
 				}else if($inps.eq(2).val().toUpperCase() != $(".yanzhengm").html().toUpperCase()){
 					$(".msg").html("验证码错误");
-				}else{
+					
+				}
+//				else if($.cookie($inps.eq(0).val()) == $inps.eq(1).val())){
+//					$(".msg").html("用户名或密码错误");
+//				}
+//				
+				else{
 					$('.msg').html('');
 				}
-				if($('.msg').html() == ''){
+				if($('.msg').html() == '' && ($.cookie($inps.eq(0).val()) == $inps.eq(1).val())){
 					flag = true;
 				}
+				
+				
+				
+			
 				if(!flag){
 					$('.form_login').submit(function(){
 						return false;
 					})
 					
 				}
+				
 			})
 				
 				

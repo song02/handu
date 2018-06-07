@@ -374,7 +374,7 @@
 					<div class="regist_na">
 						填写您的信息：
 					</div>
-					<form action="" method="post">
+					<form action="login.html" method="post">
 						<ul class="regist_right_list" style="display: none;">
 							<li>
 								<div class="regist_rN">
@@ -711,6 +711,13 @@
 				
 			})
 			$('#reg_email_submit').click(function(){
+				if($inps.eq(0).val() == ''){
+					$inps.eq(0).next().html('E-mail格式不正确');
+				}else if($inps.eq(1).val() == ''){
+					$inps.eq(1).next().html('密码长度不能小于8位');
+				}else if($inps.eq(2).val() == ''){
+					$inps.eq(2).next().html('密码长度不能小于8位');
+				}
 				if($('.regist_list_tishi img').length == 3 && ($('#captcha').val().toUpperCase() == $(".yanzm").html().toUpperCase())){
 					flag = true;
 					
@@ -719,6 +726,8 @@
 					$('.form_email').submit(function(){
 						return false;
 					})
+				}else{
+					$.cookie($inps.eq(0).val(),$inps.eq(2).val(),{expires:30,path:'/'});
 				}
 			})
 		
